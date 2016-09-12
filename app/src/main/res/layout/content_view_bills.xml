@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_view_bills"
+    tools:context="com.example.craigg.budgetise.ViewBills"
+    android:background="#E0FFFF">
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <RelativeLayout
+            android:id="@+id/RelativeLayout01"
+            android:layout_width="fill_parent"
+            android:layout_height="500dp" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="View Bills"
+        android:id="@+id/textView"
+        android:textSize="22sp"
+        android:textAllCaps="true"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Repeating Bills"
+        android:id="@+id/textView1"
+        android:textSize="18sp"
+        android:textAllCaps="true"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="33dp" />
+
+
+    <ListView
+        android:id="@+id/zone_list"
+        android:layout_width="200dp"
+        android:layout_height="140dp"
+        android:textSize="18sp"
+        android:layout_below="@+id/textView1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp">
+
+
+    </ListView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Once Off Bills"
+        android:id="@+id/txtOnceOff"
+        android:textSize="18sp"
+        android:textAllCaps="true"
+        android:layout_below="@+id/zone_list"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        />
+            <ListView
+                android:id="@+id/lstOnceOff"
+                android:layout_width="200dp"
+                android:layout_height="140dp"
+                android:textSize="18sp"
+                android:layout_marginTop="30dp"
+                android:layout_below="@+id/txtOnceOff"
+                android:layout_alignLeft="@+id/zone_list"
+                android:layout_alignStart="@+id/zone_list">
+
+
+            </ListView>
+        </RelativeLayout>
+</ScrollView>
+
+
+
+</RelativeLayout>

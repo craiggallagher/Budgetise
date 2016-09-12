@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:showIn="@layout/activity_summary" tools:context="com.example.craigg.budgetise.Summary"
+    android:background="#E0FFFF">
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <RelativeLayout
+            android:id="@+id/RelativeLayout01"
+            android:layout_width="fill_parent"
+            android:layout_height="500dp" >
+
+            <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Summary"
+            android:id="@+id/textView"
+            android:textSize="22sp"
+            android:textAllCaps="true"
+            android:textStyle="bold"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Weekly Summary"
+                android:id="@+id/weekSummary"
+                android:textSize="22sp"
+                android:textAllCaps="true"
+                android:layout_below="@+id/textView"
+                android:layout_alignRight="@+id/textView"
+                android:layout_alignEnd="@+id/textView"
+                android:layout_marginTop="62dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Budget"
+                android:id="@+id/budget"
+                android:textSize="22sp"
+                android:textAllCaps="true"
+                android:layout_below="@+id/weekSummary"
+                android:layout_alignLeft="@+id/weekSummary"
+                android:layout_alignStart="@+id/weekSummary"
+                android:layout_marginTop="51dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Expense"
+                android:id="@+id/expense"
+                android:textSize="22sp"
+                android:textAllCaps="true"
+                android:layout_marginTop="71dp"
+                android:layout_below="@+id/weekSummary"
+                android:layout_alignLeft="@+id/weekSummary"
+                android:layout_alignStart="@+id/weekSummary" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="300"
+                android:id="@+id/expenseNumber"
+                android:textSize="22sp"
+                android:textAllCaps="true"
+                android:layout_alignTop="@+id/expense"
+                android:layout_alignRight="@+id/weekSummary"
+                android:layout_alignEnd="@+id/weekSummary" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="800"
+                android:id="@+id/budgetNumber"
+                android:textSize="22sp"
+                android:textAllCaps="true"
+                android:layout_alignTop="@+id/budget"
+                android:layout_alignLeft="@+id/expenseNumber"
+                android:layout_alignStart="@+id/expenseNumber" />
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:background="#c0c0c0"
+                android:layout_below="@+id/expenseNumber"
+                android:layout_toRightOf="@+id/expense"
+                android:layout_toEndOf="@+id/expense"
+                android:id="@+id/view" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="+"
+                android:id="@+id/plus"
+                android:textSize="22sp"
+                android:textAllCaps="true"
+                android:layout_below="@+id/view"
+                android:layout_alignLeft="@+id/view"
+                android:layout_alignStart="@+id/view" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="500"
+                android:id="@+id/total"
+                android:textSize="22sp"
+                android:textAllCaps="true"
+                android:layout_alignTop="@+id/view"
+                android:layout_alignLeft="@+id/expenseNumber"
+                android:layout_alignStart="@+id/expenseNumber" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Daily Summary"
+                android:id="@+id/dailySummary"
+                android:textSize="22sp"
+                android:textAllCaps="true"
+                android:layout_marginTop="47dp"
+                android:layout_below="@+id/plus"
+                android:layout_alignLeft="@+id/expense"
+                android:layout_alignStart="@+id/expense" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Budget"
+                android:id="@+id/dailyBudget"
+                android:textSize="22sp"
+                android:textAllCaps="true"
+                android:layout_marginTop="38dp"
+                android:layout_below="@+id/dailySummary"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="170"
+                android:id="@+id/dailyBudgetNumber"
+                android:textSize="22sp"
+                android:textAllCaps="true"
+                android:layout_alignTop="@+id/dailyBudget"
+                android:layout_alignLeft="@+id/total"
+                android:layout_alignStart="@+id/total" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="45"
+                android:id="@+id/dailyExpenseNumber"
+                android:textSize="22sp"
+                android:textAllCaps="true"
+                android:layout_below="@+id/dailyBudgetNumber"
+                android:layout_alignLeft="@+id/dailyBudgetNumber"
+                android:layout_alignStart="@+id/dailyBudgetNumber" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="Expense"
+                android:id="@+id/dailyExpense"
+                android:textSize="22sp"
+                android:textAllCaps="true"
+                android:layout_below="@+id/dailyBudget"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:background="#c0c0c0"
+                android:id="@+id/view1"
+                android:layout_below="@+id/dailyExpenseNumber"
+                android:layout_toRightOf="@+id/expense"
+                android:layout_toEndOf="@+id/expense" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="+"
+                android:id="@+id/plusDaily"
+                android:textSize="22sp"
+                android:textAllCaps="true"
+                android:layout_below="@+id/dailyExpenseNumber"
+                android:layout_alignLeft="@+id/view1"
+                android:layout_alignStart="@+id/view1" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="125"
+                android:id="@+id/dailTotal"
+                android:textSize="22sp"
+                android:textAllCaps="true"
+                android:layout_alignTop="@+id/view1"
+                android:layout_alignLeft="@+id/dailyExpenseNumber"
+                android:layout_alignStart="@+id/dailyExpenseNumber" />
+
+            </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

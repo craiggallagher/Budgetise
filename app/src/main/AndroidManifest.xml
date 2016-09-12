@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.craigg.budgetise">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false" />
+    <uses-feature
+        android:name="android.software.leanback"
+        android:required="true" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/wallet"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Login"
+            android:label="@string/title_activity_login"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.craigg.budgetise.MainActivity" />
+        </activity>
+        <activity
+            android:name=".SignUp"
+            android:label="@string/title_activity_sign_up"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.craigg.budgetise.MainActivity" />
+        </activity>
+        <activity
+            android:name=".Menu"
+            android:label="@string/title_activity_menu"
+            android:parentActivityName=".Login"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.craigg.budgetise.Login" />
+        </activity>
+        <activity
+            android:name=".addBill"
+            android:label="@string/title_activity_add_bill"
+            android:parentActivityName=".Menu"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.craigg.budgetise.Menu" />
+        </activity>
+        <activity
+            android:name=".AddToCurrentBudget"
+            android:label="@string/title_activity_add_to_current_budget"
+            android:parentActivityName=".Menu"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.craigg.budgetise.Menu" />
+        </activity>
+        <activity
+            android:name=".ViewBills"
+            android:label="@string/title_activity_view_bills"
+            android:parentActivityName=".Menu"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.craigg.budgetise.Menu" />
+        </activity>
+        <activity
+            android:name=".Bills"
+            android:label="@string/title_activity_bills"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".OnceOff"
+            android:label="@string/title_activity_once_off"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".EditBill"
+            android:label="@string/title_activity_edit_bill"
+            android:parentActivityName=".ViewBills"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.craigg.budgetise.ViewBills" />
+        </activity>
+        <activity
+            android:name=".ViewRemaining"
+            android:label="@string/title_activity_view_remaining"
+            android:parentActivityName=".Menu"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.craigg.budgetise.Menu" />
+        </activity>
+        <activity
+            android:name=".Summary"
+            android:label="@string/title_activity_summary"
+            android:parentActivityName=".ViewRemaining"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.craigg.budgetise.ViewRemaining" />
+        </activity>
+        <activity
+            android:name=".Alert"
+            android:label="@string/title_activity_alert"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity
+            android:name=".newer"
+            android:label="@string/title_activity_newer"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+    </application>
+
+</manifest>
